@@ -39,20 +39,27 @@ const sconto20 = moltiplicazione * userMinorenni / 100;
 const sconto40 = moltiplicazione * userAnziani / 100;
 /*console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");*/
 
+let risultato ="";
+
 // Confronto prezzo età
+
 if(userAge < 18) {
-    console.log("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");
+    //console.log ("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");
+    risultato= moltiplicazione - sconto20 ;
+
 
 } else if (userAge > 65) {
-    console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");
+   // console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");
+   risultato=  moltiplicazione - sconto40  ;
 
 } else {
-    console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");
+    //console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");
+    risultato= moltiplicazione ;
 }
 
 
 
 // Output per lo User 
-document.getElementById("mio_id").innerHTML= "ciao"
+document.getElementById("mio_id").innerHTML= "Il prezzo del tuo biglietto è:"+ risultato  +"€";
 
 
