@@ -52,3 +52,7 @@ if(userAge < 18) {
 
 
 
+// Output per lo User 
+document.getElementById("mio_id").innerHTML= "ciao"
+
+
