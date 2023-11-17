@@ -29,15 +29,26 @@ const userAnziani = 40;
 
 // Calcolo prezzo del viaggio
 const moltiplicazione = userKm * kmEuro;
-console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");
+/*console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");*/
 
 // Calcolo prezzo viaggio minorenni
 const sconto20 = moltiplicazione * userMinorenni / 100;
-console.log("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");
+/*console.log("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");*/
 
 // Calcolo prezzo viaggio maggiorenni
 const sconto40 = moltiplicazione * userAnziani / 100;
-console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");
+/*console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");*/
+
+// Confronto prezzo età
+if(userAge < 18) {
+    console.log("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");
+
+} else if (userAge > 65) {
+    console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");
+
+} else {
+    console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");
+}
 
 
 
